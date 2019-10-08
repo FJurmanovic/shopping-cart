@@ -2,9 +2,9 @@
     <div class='card' *ngFor="let item of products">
         <img src="{{ item.image }}" alt="{{ item.name }}">
         <br>
-        <span class='name'>{{ item.name }}</span>
+        <div class='name'>{{ item.name }}</div>
         <br>
-        <span class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</span>
+        <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
         <br>
         <button>DODAJ</button>
     </div>

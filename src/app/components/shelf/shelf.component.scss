@@ -1,7 +1,9 @@
  .cart{
+     width: 100%;
+     height: 100%;
     .card{
-        width: 250px;
-        height: 350px;
+        width: 270px;
+        height: 380px;
         border: 1px solid black;
         text-align: center;
         display: inline-block;
@@ -9,22 +11,21 @@
         img{
             margin-top: 15px;
             width: 90%;
-            border: 1px solid #000000;
-            @media screen and (max-height: 150px) {
-                height: 150px;
-              }
+            border: 1px solid #000000;        
         }
-        span.name{
-            font-size: 1.2rem;
-        }
-        span.price{
+        .name{
+            width: 90%;
             font-size: 1.1rem;
+            display: inline-block;
+            overflow: hidden;
+                text-overflow: ellipsis;
+            white-space: nowrap;
         }
-        p{
-            //text-align: center;
+        .price{
+            font-size: 1.1rem;
+            padding-top: 6px;
         }
-        button{
-            margin-bottom: 15px;
+        button{   
             width: 45%;
             height: 2rem;
             background-color: #eeeeee;
