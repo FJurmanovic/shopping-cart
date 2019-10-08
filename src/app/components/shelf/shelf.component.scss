@@ -1,27 +1,37 @@
-.card{
-    width: 250px;
-    //height: 300px;
-    border: 1px solid black;
-    text-align: center;
-    img{
-        margin-top: 15px;
-        width: 90%;
-        border: 1px solid #000000;
+ .cart{
+    .card{
+        width: 250px;
+        height: 350px;
+        border: 1px solid black;
+        text-align: center;
+        display: inline-block;
+        margin: 6px 6px;
+        img{
+            margin-top: 15px;
+            width: 90%;
+            border: 1px solid #000000;
+            @media screen and (max-height: 150px) {
+                height: 150px;
+              }
+        }
+        span.name{
+            font-size: 1.2rem;
+        }
+        span.price{
+            font-size: 1.1rem;
+        }
+        p{
+            //text-align: center;
+        }
+        button{
+            margin-bottom: 15px;
+            width: 45%;
+            height: 2rem;
+            background-color: #eeeeee;
+            border: 1px solid #dddddd;
+        }
+        button:hover{
+            background-color: #e6e6e6;
+        }
     }
-    span{
-        font-size: 18pt;
-    }
-    p{
-        //text-align: center;
-    }
-    button{
-        margin-bottom: 15px;
-        width: 45%;
-        height: 2rem;
-        background-color: #eeeeee;
-        border: 1px solid #dddddd;
-    }
-    button:hover{
-        background-color: #e6e6e6;
-    }
-}
+ }

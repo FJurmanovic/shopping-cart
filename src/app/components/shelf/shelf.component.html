@@ -1,7 +1,11 @@
-<div class='card'>
-    <img src="https://d17zv3ray5yxvp.cloudfront.net/variants/W1ymDizfe679XsfX9uP8A5bU/7b27a910a7194c812eacf34700e38dcab3abed02f30837d1dad313c5651bb5fa" alt="Jabuka">
-    <br>
-    <span>Jabuka</span>
-    <p>10.99 kn/kom</p>
-    <button>DODAJ</button>
+<div class='cart' *ngIf="products">
+    <div class='card' *ngFor="let item of products">
+        <img src="{{ item.image }}" alt="{{ item.name }}">
+        <br>
+        <span class='name'>{{ item.name }}</span>
+        <br>
+        <span class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</span>
+        <br>
+        <button>DODAJ</button>
+    </div>
 </div>
