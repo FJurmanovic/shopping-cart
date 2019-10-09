@@ -6,6 +6,16 @@
         <br>
         <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
         <br>
-        <button>DODAJ</button>
+        <button (click)="toCart(item.id)">DODAJ</button>
+    </div>
+</div>
+
+<div class='side'>
+    <h1>Kosarica</h1>
+    <div class='products' *ngFor="let product of inCart">
+        <img src="" alt="">
+        <span>{{product.count}}</span>
+        <span>{{product.name}}</span>
+    <img src="" alt="">
     </div>
 </div>

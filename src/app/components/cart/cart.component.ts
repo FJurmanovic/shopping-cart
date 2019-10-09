@@ -9,7 +9,17 @@ export class CartComponent implements OnInit {
 
   constructor() { }
 
+  
+
   ngOnInit() {
+    class inCart{
+      count: number;
+      product: string;
+      price: number;
+    }
+    
+    var products: Array<inCart>;
+
   }
 
 }
