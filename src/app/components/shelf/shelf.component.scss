@@ -1,47 +1,104 @@
- .cart{
-     width: 80%;
-     height: 100%;
+.collective{
+  .cart{
+    width: calc(100% - 400px);
+    flex-basis: 0;
+    flex-grow: 999;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    flex: 3 0px;
     .card{
-        width: 270px;
-        height: 380px;
-        border: 1px solid black;
-        text-align: center;
+      border: 1px solid black;
+      text-align: center;
+      margin: 6px 6px;
+      padding-bottom: 5px;
+      img{
+        margin-top: 15px;
+        width: 90%;
+        border: 1px solid #000000;        
+      }
+      .name{
+        width: 90%;
+        font-size: 1.1rem;
         display: inline-block;
-        margin: 6px 6px;
-        img{
-            margin-top: 15px;
-            width: 90%;
-            border: 1px solid #000000;        
-        }
-        .name{
-            width: 90%;
-            font-size: 1.1rem;
-            display: inline-block;
-            overflow: hidden;
-                text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .price{
-            font-size: 1.1rem;
-            padding-top: 6px;
-        }
-        button{   
-            width: 45%;
-            height: 2rem;
-            background-color: #eeeeee;
-            border: 1px solid #dddddd;
-        }
-        button:hover{
-            background-color: #e6e6e6;
-        }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .price{
+        font-size: 1.1rem;
+        padding-top: 6px;
+      }
+      button{   
+        width: 45%;
+        height: 2rem;
+        background-color: #eeeeee;
+        border: 1px solid #dddddd;
+      }
+      button:hover{
+        background-color: #e6e6e6;
+      }
     }
- }
+  }
 
- .side{
-    position: absolute;
-    top: 0;
+  .side{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 400px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
     right: 0;
-    left: 80%;
-    bottom: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
     background-color: #eeeeee;
+      .card{
+        box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        margin: 10px 1rem;
+        display: inline-grid;
+        grid-template-columns: 100px 50px auto;
+        grid-gap: 10px;
+        align-items: center;
+        justify-items: center;
+        background: #f3f3f3;
+        .thumbnail{
+          width: 150px;
+          height: 100%;
+          transition: width 0.4s;
+          overflow: hidden;
+          z-index: 2;
+          left: 0;
+          margin: auto;
+          img{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+          }
+        }
+        .counts{
+          height: 1fr;
+          .productCount{
+            font-size: 3em;
+          }
+        }
+        .twoProds{
+          width: 190px;
+          .productName{
+            display: block;
+            max-width: 95%;
+            white-space: nowrap;
+            overflow: hidden !important;
+            text-overflow: ellipsis;
+          }
+          .productPrice{
+            display: block;
+          }
+        }
+      }
+      .card:hover{
+      }
+    }
 }

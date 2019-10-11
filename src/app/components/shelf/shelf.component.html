@@ -1,21 +1,30 @@
-<div class='cart' *ngIf="products">
-    <div class='card' *ngFor="let item of products">
-        <img src="{{ item.image }}" alt="{{ item.name }}">
-        <br>
-        <div class='name'>{{ item.name }}</div>
-        <br>
-        <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
-        <br>
-        <button (click)="toCart(item.id)">DODAJ</button>
-    </div>
-</div>
+<div class='collective'>
+  <div class='cart' *ngIf="products">
+      <div class='card' *ngFor="let item of products">
+          <img src="{{ item.image }}" alt="{{ item.name }}">
+          <br>
+          <div class='name'>{{ item.name }}</div>
+          <br>
+          <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
+          <br>
+          <button (click)="toCart(item.id)">DODAJ</button>
+      </div>
+  </div>
 
-<div class='side'>
-    <h1>Kosarica</h1>
-    <div class='products' *ngFor="let product of inCart">
-        <img src="" alt="">
-        <span>{{product.count}}</span>
-        <span>{{product.name}}</span>
-    <img src="" alt="">
-    </div>
+  <div class='side'>
+      <h1>Kosarica</h1>
+      <div class='card' *ngFor="let product of inCart">
+        <div class='thumbnail'>
+          <img src="{{product.image}}" alt="{{product.name}}">
+        </div>
+        <div class='counts'>
+          <span class='productCount'>{{product.count}}x</span>
+        </div>
+        <div class='twoProds'>
+          <span class='productName'>{{product.name}}</span>
+          <span class='productPrice'>{{product.price}} kn</span>
+        </div>
+        
+      </div>    
+  </div>
 </div>
