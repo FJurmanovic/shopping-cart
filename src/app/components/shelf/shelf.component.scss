@@ -65,7 +65,7 @@
         justify-items: center;
         background: #f3f3f3;
         .thumbnail{
-          width: 150px;
+          width: 100px;
           height: 100%;
           transition: width 0.4s;
           overflow: hidden;
@@ -83,6 +83,22 @@
           .productCount{
             font-size: 3em;
           }
+          .addRem{
+            text-align: center;
+            button{
+              width: 20px;
+              height: 20px;
+              margin: 0 1px;
+              text-decoration: none;
+              color: #ffffff;
+              background-color: #333333;
+              border-radius: 100%;
+              border: none;
+            }
+            button:hover{
+              background-color: #666666;
+            }
+          }
         }
         .twoProds{
           width: 190px;
@@ -97,8 +113,21 @@
             display: block;
           }
         }
+        .removeBtn{
+          width: 20px;
+          height: 20px;
+          margin: 0 1px;
+          text-decoration: none;
+          color: #ffffff;
+          background-color: #333333;
+          border-radius: 100%;
+          border: none;
+          top: 0;
+          right: 0;
+        }
       }
       .card:hover{
+        background-color: #e3e3e3;
       }
     }
 }

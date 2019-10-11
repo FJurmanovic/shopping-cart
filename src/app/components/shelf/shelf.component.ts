@@ -30,6 +30,23 @@ export class ShelfComponent implements OnInit {
     console.log(this.inCart);
   }
 
+  addCount(id: number){
+    this.inCart.find(x=>x.id == id).count++;
+  }
+
+  remCount(id: number){
+    if (this.inCart.find(x=>x.id == id).count <= 1){
+      this.inCart.splice(this.inCart.findIndex(x=>x.id == id), 1);
+    }else if(this.inCart.find(x=>x.id == id).count > 0){
+      this.inCart.find(x=>x.id == id).count--;
+    }
+  }
+
+  remProd(id: number){
+    this.inCart.splice(this.inCart.findIndex(x=>x.id == id), 1);
+
+  }
+
   ngOnInit() {
     this.httpService.get('./assets/products.json').subscribe(
       data => {

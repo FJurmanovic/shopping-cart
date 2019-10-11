@@ -19,12 +19,17 @@
         </div>
         <div class='counts'>
           <span class='productCount'>{{product.count}}x</span>
+          <br>
+          <div class='addRem'>
+            <button class='add' (click)="remCount(product.id)">-</button>
+            <button class='remove' (click)="addCount(product.id)">+</button>
+          </div>
         </div>
         <div class='twoProds'>
           <span class='productName'>{{product.name}}</span>
           <span class='productPrice'>{{product.price}} kn</span>
         </div>
-        
+        <button class='removeBtn' (click)="remProd(product.id)">x</button>
       </div>    
   </div>
 </div>
