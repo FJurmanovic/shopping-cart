@@ -27,9 +27,13 @@
         </div>
         <div class='twoProds'>
           <span class='productName'>{{product.name}}</span>
-          <span class='productPrice'>{{product.price}} kn</span>
+          <span class='productPrice'>Ukupno: {{product.price * product.count}} kn</span>
         </div>
         <button class='removeBtn' (click)="remProd(product.id)">x</button>
-      </div>    
+      </div> 
+      <div class='sumPrice'>
+        <span class='iznosText'>Ukupan iznos:</span>
+        <span class='ukupanIznos'>{{ sum.toFixed(2) }} kn </span>
+      </div>   
   </div>
 </div>
