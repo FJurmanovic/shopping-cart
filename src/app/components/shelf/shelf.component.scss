@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 .collective{
+  font-family: 'Open Sans', sans-serif;
   .cart{
     width: calc(100% - 400px);
     flex-basis: 0;
@@ -11,7 +14,7 @@
       border: 1px solid black;
       text-align: center;
       margin: 6px 6px;
-      padding-bottom: 5px;
+      padding-bottom: 15px;
       img{
         margin-top: 15px;
         width: 90%;
@@ -28,6 +31,8 @@
       .price{
         font-size: 1.1rem;
         padding-top: 6px;
+        font-weight: bold;
+        color: #000000;
       }
       button{   
         width: 45%;
@@ -38,6 +43,9 @@
       button:hover{
         background-color: #e6e6e6;
       }
+    }
+    .card:hover{
+      border: 1px solid #aaaaaa;
     }
   }
 
@@ -51,9 +59,15 @@
     background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
-    background-color: #eeeeee;
+    background-color: #f4f4f4;    
+      .sideHeader{
+        width: 100%;
+        text-align: center;
+        h1{
+        }
+      }
       .card{
-        box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+        box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4);
         border-radius: 6px;
         overflow: hidden;
         position: relative;
@@ -111,6 +125,7 @@
           }
           .productPrice{
             display: block;
+            font-weight: bold;
           }
         }
         .removeBtn{
@@ -131,7 +146,37 @@
         }
       }
       .card:hover{
-        background-color: #e3e3e3;
+        background-color: #ececec;
       }
+      .sideFooter {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .sumPrice{
+          .izonsText{
+            font-size: 1.3em;
+          }
+          .ukupanIznos{
+            font-size: 1.7em;
+            display: block;
+            font-weight: bold;
+          }
+        }
+        .ftrBtn{
+          right: 15px;
+          display: inline;
+          button{
+            padding-right: 15px;
+            padding-left: 15px;
+            height: 2rem;
+            background-color: #eeeeee;
+            border: 1px solid #dddddd;
+          }
+          button:hover{
+            background-color: 1px solid #e6e6e6;
+          }
+        }
+      }
+      
     }
 }

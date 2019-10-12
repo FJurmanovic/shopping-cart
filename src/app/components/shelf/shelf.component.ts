@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
-import { CartComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-shelf',
@@ -9,8 +8,6 @@ import { CartComponent } from '../cart/cart.component';
   styleUrls: ['./shelf.component.scss']
 })
 export class ShelfComponent implements OnInit {
-
-  @Input() sideBar: CartComponent;
 
   constructor (private httpService: HttpClient) { }
   productsObject: object[];
@@ -27,7 +24,6 @@ export class ShelfComponent implements OnInit {
       this.inCart.push({id: id, name: this.products[id-1].name, image: this.products[id-1].image, price: this.products[id-1].price["amount"], count: 1});
     }
     this.sum += this.inCart.find(x=>x.id == id).price;
-    console.log(this.inCart);
   }
 
   addCount(id: number){
@@ -49,12 +45,16 @@ export class ShelfComponent implements OnInit {
   remProd(id: number){
     this.sum -= this.inCart.find(x=>x.id == id).price * this.inCart.find(x=>x.id == id).count;
     this.inCart.splice(this.inCart.findIndex(x=>x.id == id), 1);
+    if (this.sum < 0){
+      this.sum = 0.00;
+    }
 
   }
 
 
   ngOnInit() {
     this.sum = 0.00;
+    
     this.httpService.get('./assets/products.json').subscribe(
       data => {
         this.productsObject = data as object [];	 

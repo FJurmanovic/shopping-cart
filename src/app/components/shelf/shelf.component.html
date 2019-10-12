@@ -12,7 +12,9 @@
   </div>
 
   <div class='side'>
-      <h1>Kosarica</h1>
+      <div class='sideHeader'>
+        <h1>Kosarica</h1>
+      </div>
       <div class='card' *ngFor="let product of inCart">
         <div class='thumbnail'>
           <img src="{{product.image}}" alt="{{product.name}}">
@@ -31,9 +33,16 @@
         </div>
         <button class='removeBtn' (click)="remProd(product.id)">x</button>
       </div> 
-      <div class='sumPrice'>
-        <span class='iznosText'>Ukupan iznos:</span>
-        <span class='ukupanIznos'>{{ sum.toFixed(2) }} kn </span>
-      </div>   
+      <hr>
+      <div class='sideFooter'>
+        <div class='sumPrice'>
+          <span class='iznosText'>Ukupan iznos:</span>
+          <span class='ukupanIznos'>{{ sum.toFixed(2) }} kn </span>
+        </div>   
+        <div class='ftrBtn'>
+          <button>Checkout</button>
+        </div>
+      </div>
+      
   </div>
 </div>
