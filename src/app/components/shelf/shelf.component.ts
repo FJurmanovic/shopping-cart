@@ -17,6 +17,25 @@ export class ShelfComponent implements OnInit {
   count: number;
   sum: number;
 
+  toggleSide() {
+    let side = document.getElementById("side");
+    let toggle = document.getElementById("toggle");
+    let div0 = toggle.getElementsByTagName("div")[0];
+    let cart = document.getElementById("cart");
+
+    if(side.style.display != "none")
+      {
+        side.style.display = "none";
+        div0.className = "toggleBtn on";
+        cart.style.width = "100%";
+
+      } else {
+        side.style.display = "block";
+        div0.className = "toggleBtn";
+        cart.style.width = "";
+      }
+  }
+
   toCart(id: number){
     if((this.inCart.filter((obj) => obj.id === id).length) > 0){
       this.inCart.find(x=>x.id == id).count++;

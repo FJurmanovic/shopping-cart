@@ -1,17 +1,11 @@
 <div class='collective'>
-  <div class='cart' *ngIf="products">
-      <div class='card' *ngFor="let item of products">
-          <img src="{{ item.image }}" alt="{{ item.name }}">
-          <br>
-          <div class='name'>{{ item.name }}</div>
-          <br>
-          <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
-          <br>
-          <button (click)="toCart(item.id)">DODAJ</button>
-      </div>
-  </div>
+      
+  <a href="#" (click)="toggleSide()" class="toggle" id="toggle">
+    <div class="toggleBtn"></div>
+  </a>
 
-  <div class='side'>
+
+  <div class='side' id="side">
       <div class='sideHeader'>
         <h1>Kosarica</h1>
       </div>
@@ -29,7 +23,7 @@
         </div>
         <div class='twoProds'>
           <span class='productName'>{{product.name}}</span>
-          <span class='productPrice'>Ukupno: {{product.price * product.count}} kn</span>
+          <span class='productPrice'>Ukupno: {{(product.price * product.count).toFixed(2)}} kn</span>
         </div>
         <button class='removeBtn' (click)="remProd(product.id)">x</button>
       </div> 
@@ -43,6 +37,20 @@
           <button>Checkout</button>
         </div>
       </div>
+
+      
       
   </div>
+
+  <div class='cart' *ngIf="products" id="cart">
+    <div class='card' *ngFor="let item of products">
+        <img src="{{ item.image }}" alt="{{ item.name }}">
+        <br>
+        <div class='name'>{{ item.name }}</div>
+        <br>
+        <div class='price'>{{ item.price.amount + " " + item.price.currency + "/" + item.price.measureUnit }}</div>
+        <br>
+        <button (click)="toCart(item.id)">DODAJ</button>
+    </div>
+</div>
 </div>
