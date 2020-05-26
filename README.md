@@ -1,23 +1,28 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Checkbox from '@material-ui/core/Checkbox';
+## By Fran Jurmanović
 
-class App extends Component {
-    render() {
-        return(
-            <div>
-                <Checkbox
-                    value="checkedA"
-                    inputProps={{ 'aria-label': 'Checkbox A' }}
-                />
-                <span>First todo</span>
-                <IconButton aria-label="delete" className={classes.margin}>
-                    <DeleteIcon fontSize="small" />
-                </IconButton>
-            </div>
-        );
-    }
-}
+### Assignment for [Cobe frontend-tasks]( https://github.com/cobeisfresh/frontend-tasks/tree/shopping-cart )
 
-export default App;
+### Tasks:
+
+- [x]  By clicking the "Add" button the selected product is being added to the cart 
+- [x]  The cart contains a list of all the products added and the total amount 
+- [x]  Once added, the product can be deleted from the cart 
+- [x]  One product can be added to the cart more than once, in which case it is necessary to write how many products are in the cart and their total amount individually 
+- [x]  Use the product list contained in the ``` product.json ``` file 
+- [x]  The use of (web) technology and tools of your choice is allowed (Angular)
+- [x]  Use a repository from the beginning, don't push everything in just one commit 
+- [x]  Pay extra attention to the code quality, formatting and best practices 
+
+____
+
+##### Extra mile:
+
+- [x]  Using type checker (Typescript is built in angular)
+- [x]  App is deployed and live (Deployed on github-pages) 
+- [x]  Suprise features that we don't expect to get
+  + Increase or decrease by one after item is added to cart
+
+____
+
+## Check it live on gh-pages: [Shopping-Cart](https://yurma.wtf/shopping-cart)
+
