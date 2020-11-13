@@ -24,5 +24,5 @@ ____
 
 ____
 
-## Check it live on gh-pages: [Shopping-Cart](https://yurma.wtf/shopping-cart)
+## Check it live on gh-pages: [Shopping-Cart](https://jurmanovic.com/shopping-cart)
 
